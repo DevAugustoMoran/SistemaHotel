@@ -53,16 +53,97 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmAsignaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAsignaciones.Designer.cs">
+      <DependentUpon>frmAsignaciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmConsumos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConsumos.Designer.cs">
+      <DependentUpon>frmConsumos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEmpleados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEmpleados.Designer.cs">
+      <DependentUpon>frmEmpleados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmHabitaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHabitaciones.Designer.cs">
+      <DependentUpon>frmHabitaciones.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmHuespedes.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmHuespedes.Designer.cs">
       <DependentUpon>frmHuespedes.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmPagoPlanillas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPagoPlanillas.Designer.cs">
+      <DependentUpon>frmPagoPlanillas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPagos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPagos.Designer.cs">
+      <DependentUpon>frmPagos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmReservaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReservaciones.Designer.cs">
+      <DependentUpon>frmReservaciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmServicios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmServicios.Designer.cs">
+      <DependentUpon>frmServicios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUsuarios.Designer.cs">
+      <DependentUpon>frmUsuarios.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmAsignaciones.resx">
+      <DependentUpon>frmAsignaciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmConsumos.resx">
+      <DependentUpon>frmConsumos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEmpleados.resx">
+      <DependentUpon>frmEmpleados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmHabitaciones.resx">
+      <DependentUpon>frmHabitaciones.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmHuespedes.resx">
       <DependentUpon>frmHuespedes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPagoPlanillas.resx">
+      <DependentUpon>frmPagoPlanillas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPagos.resx">
+      <DependentUpon>frmPagos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReservaciones.resx">
+      <DependentUpon>frmReservaciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmServicios.resx">
+      <DependentUpon>frmServicios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUsuarios.resx">
+      <DependentUpon>frmUsuarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

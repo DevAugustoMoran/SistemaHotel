@@ -37,21 +37,19 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.txtCodigoHuesped = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.lblFecha = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtNit = new System.Windows.Forms.TextBox();
+            this.txtTelefono = new System.Windows.Forms.TextBox();
             this.btnCancelar = new FontAwesome.Sharp.IconButton();
             this.btnEditar = new FontAwesome.Sharp.IconButton();
             this.btnAgregar = new FontAwesome.Sharp.IconButton();
             this.btnSalir = new FontAwesome.Sharp.IconButton();
             this.btnEliminar = new FontAwesome.Sharp.IconButton();
-            this.cboxUsuarioSistema = new System.Windows.Forms.ComboBox();
-            this.txtTelefono = new System.Windows.Forms.TextBox();
-            this.txtNit = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHuespedes)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -72,12 +70,6 @@
             // 
             this.cboxTipo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboxTipo.FormattingEnabled = true;
-            this.cboxTipo.Items.AddRange(new object[] {
-            "Jarabe",
-            "Pastilla",
-            "Suero",
-            "Vitaminas",
-            "Cremas"});
             this.cboxTipo.Location = new System.Drawing.Point(178, 122);
             this.cboxTipo.Name = "cboxTipo";
             this.cboxTipo.Size = new System.Drawing.Size(121, 23);
@@ -97,6 +89,11 @@
             // 
             this.cboxEstado.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboxEstado.FormattingEnabled = true;
+            this.cboxEstado.Items.AddRange(new object[] {
+            "Activo",
+            "Inactivo",
+            "Bloqueado",
+            "Historico"});
             this.cboxEstado.Location = new System.Drawing.Point(505, 28);
             this.cboxEstado.Name = "cboxEstado";
             this.cboxEstado.Size = new System.Drawing.Size(121, 23);
@@ -146,16 +143,6 @@
             this.txtCodigoHuesped.ReadOnly = true;
             this.txtCodigoHuesped.Size = new System.Drawing.Size(121, 20);
             this.txtCodigoHuesped.TabIndex = 15;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Calisto MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(326, 63);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(101, 15);
-            this.label6.TabIndex = 8;
-            this.label6.Text = "Usuario Sistema:";
             // 
             // label5
             // 
@@ -211,7 +198,6 @@
             // 
             this.groupBox1.Controls.Add(this.txtNit);
             this.groupBox1.Controls.Add(this.txtTelefono);
-            this.groupBox1.Controls.Add(this.cboxUsuarioSistema);
             this.groupBox1.Controls.Add(this.btnCancelar);
             this.groupBox1.Controls.Add(this.btnEditar);
             this.groupBox1.Controls.Add(this.btnAgregar);
@@ -221,7 +207,6 @@
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.txtCodigoHuesped);
-            this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label2);
@@ -231,6 +216,20 @@
             this.groupBox1.Size = new System.Drawing.Size(820, 150);
             this.groupBox1.TabIndex = 45;
             this.groupBox1.TabStop = false;
+            // 
+            // txtNit
+            // 
+            this.txtNit.Location = new System.Drawing.Point(178, 66);
+            this.txtNit.Name = "txtNit";
+            this.txtNit.Size = new System.Drawing.Size(121, 20);
+            this.txtNit.TabIndex = 52;
+            // 
+            // txtTelefono
+            // 
+            this.txtTelefono.Location = new System.Drawing.Point(178, 93);
+            this.txtTelefono.Name = "txtTelefono";
+            this.txtTelefono.Size = new System.Drawing.Size(121, 20);
+            this.txtTelefono.TabIndex = 51;
             // 
             // btnCancelar
             // 
@@ -302,29 +301,6 @@
             this.btnEliminar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnEliminar.UseVisualStyleBackColor = true;
             // 
-            // cboxUsuarioSistema
-            // 
-            this.cboxUsuarioSistema.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboxUsuarioSistema.FormattingEnabled = true;
-            this.cboxUsuarioSistema.Location = new System.Drawing.Point(505, 59);
-            this.cboxUsuarioSistema.Name = "cboxUsuarioSistema";
-            this.cboxUsuarioSistema.Size = new System.Drawing.Size(121, 23);
-            this.cboxUsuarioSistema.TabIndex = 50;
-            // 
-            // txtTelefono
-            // 
-            this.txtTelefono.Location = new System.Drawing.Point(178, 93);
-            this.txtTelefono.Name = "txtTelefono";
-            this.txtTelefono.Size = new System.Drawing.Size(121, 20);
-            this.txtTelefono.TabIndex = 51;
-            // 
-            // txtNit
-            // 
-            this.txtNit.Location = new System.Drawing.Point(178, 66);
-            this.txtNit.Name = "txtNit";
-            this.txtNit.Size = new System.Drawing.Size(121, 20);
-            this.txtNit.TabIndex = 52;
-            // 
             // frmHuespedes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -358,7 +334,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtCodigoHuesped;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label2;
@@ -372,7 +347,6 @@
         private FontAwesome.Sharp.IconButton btnEliminar;
         private System.Windows.Forms.TextBox txtNit;
         private System.Windows.Forms.TextBox txtTelefono;
-        private System.Windows.Forms.ComboBox cboxUsuarioSistema;
     }
 }
 
