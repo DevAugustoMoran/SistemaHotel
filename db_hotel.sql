@@ -15,3 +15,144 @@ CREATE TABLE tbl_huespedes
 SELECT * FROM tbl_huespedes;
 
 Insert into tbl_huespedes(Nombre, Nit, Telefono, Tipo, Estado, UsuarioSistema, FechaSistema) values (@Nombre, @Nit, @Telefono, @Tipo, @Estado, @UsuarioSistema, @FechaSistema);
+
+CREATE TABLE tbl_Pagos
+(
+	CodigoPago INT PRIMARY KEY IDENTITY(1,1) NOT NULL,
+	CodigoReserva INT,	
+	Monto DECIMAL(10,2),
+	Propina DECIMAL(10,2),
+	Impuesto DECIMAL(10,2),
+	Descuento DECIMAL(10,2),
+	TotalPago DECIMAL(10,2),
+	FechaPago DATETIME,
+	MetodoPago VARCHAR(50),
+	UsuarioSistema VARCHAR(50),
+	FechaSistema DATETIME,
+	Foreign key (CodigoReserva) references tbl_Reservaciones(CodigoReserva)
+);
+
+SELECT * FROM tbl_Pagos;
+
+CREATE TABLE tbl_Reservaciones
+(
+	CodigoReserva INT PRIMARY KEY IDENTITY(1,1) NOT NULL,
+	CodigoHuesped INT,
+	CodigoHabitacion INT,
+	FechaEntrada DATETIME,
+	FechaSalida DATETIME,
+	Total DECIMAL(10,2),
+	UsuarioSistema VARCHAR(50),
+	FechaSistema DATETIME,
+	Foreign key (CodigoHuesped) references tbl_huespedes(CodigoHuesped),
+	Foreign key (CodigoHabitacion) references tbl_Habitaciones(CodigoHabitacion)
+);
+
+SELECT * FROM tbl_Reservaciones;
+
+CREATE TABLE tbl_Habitaciones
+(
+	CodigoHabitacion INT PRIMARY KEY IDENTITY(1,1) NOT NULL,
+	Numero VARCHAR(10),
+	Ubicacion VARCHAR(100),
+	Tipo VARCHAR(50),
+	Precio DECIMAL(10,2),
+	Estado VARCHAR(20),
+	UsuarioSistema VARCHAR(50),
+	FechaSistema DATETIME
+);
+
+SELECT * FROM tbl_Habitaciones;
+
+CREATE TABLE tbl_Asignaciones
+(
+	CodigoAsignacion INT PRIMARY KEY IDENTITY(1,1) NOT NULL,
+	CodigoEmpleado INT,
+	CodigoHabitacion INT,
+	TipoAsignacion VARCHAR(50),
+	FechaAsignacion DATETIME,
+	Estado VARCHAR(20),
+	UsuarioSistema VARCHAR(50),
+	FechaSistema DATETIME,
+	Foreign key (CodigoEmpleado) references tbl_Empleados(CodigoEmpleado),
+	Foreign key (CodigoHabitacion) references tbl_Habitaciones(CodigoHabitacion)
+);
+
+SELECT * FROM tbl_Asignaciones;
+
+CREATE TABLE tbl_Consumos
+(
+	CodigoConsumo INT PRIMARY KEY IDENTITY(1,1) NOT NULL,
+	CodigoReserva INT,
+	CodigoServicio INT,
+	Monto DECIMAL(10,2),
+	FechaConsumo DATETIME,
+	Estado VARCHAR(20),
+	UsuarioSistema VARCHAR(50),
+	FechaSistema DATETIME,
+	Foreign key (CodigoReserva) references tbl_Reservaciones(CodigoReserva),
+	Foreign key (CodigoServicio) references tbl_Servicios(CodigoServicio)
+);
+
+SELECT * FROM tbl_Consumos;
+
+CREATE TABLE tbl_Servicios
+(
+	CodigoServicio INT PRIMARY KEY IDENTITY(1,1) NOT NULL,
+	Nombre VARCHAR(50),
+	Tipo VARCHAR(50),
+	Precio DECIMAL(10,2),
+	FechaVigencia DATETIME,
+	FechaVencimiento DATETIME,
+	Estado VARCHAR(20),
+	UsuarioSistema VARCHAR(50),
+	FechaSistema DATETIME
+);
+
+SELECT * FROM tbl_Servicios;
+
+CREATE TABLE tbl_Usuarios
+(
+	CodigoUsuario INT PRIMARY KEY IDENTITY(1,1) NOT NULL,
+	CodigoEmpleado INT,
+	NombreUsuario VARCHAR(50),
+	Contrasena VARCHAR(50),
+	Rol VARCHAR(50),
+	Estado VARCHAR(50),
+	UsuarioSistema VARCHAR(50),
+	FechaSistema DATETIME,
+	Foreign key (CodigoEmpleado) references tbl_Empleados(CodigoEmpleado)
+);
+
+SELECT * FROM tbl_Usuarios;
+
+CREATE TABLE tbl_PagoPlanillas
+(
+	CodigoPagoPlanilla INT PRIMARY KEY IDENTITY(1,1) NOT NULL,
+	CodigoEmpleado INT,
+	FechaPago DATETIME,
+	Salario DECIMAL(10,2),
+	Bono DECIMAL(10,2),
+	HorasExtras INT,
+	MontoTotal DECIMAL(10,2),
+	Estado VARCHAR(20),
+	UsuarioSistema VARCHAR(50),
+	FechaSistema DATETIME,
+	Foreign key (CodigoEmpleado) references tbl_Empleados(CodigoEmpleado)
+);
+
+SELECT * FROM tbl_PagoPlanillas;
+
+CREATE TABLE tbl_Empleados
+(
+	CodigoEmpleado INT PRIMARY KEY IDENTITY(1,1) NOT NULL,
+	Nombre VARCHAR(50),
+	Cargo VARCHAR(50),
+	Salario DECIMAL(10,2),
+	FechaContratacion DATETIME,
+	Estado VARCHAR(20),
+	UsuarioSistema VARCHAR(50),
+	FechaSistema DATETIME
+);
+
+SELECT * FROM tbl_Empleados;
