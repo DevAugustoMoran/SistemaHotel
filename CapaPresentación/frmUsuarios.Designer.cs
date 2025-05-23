@@ -35,6 +35,8 @@
             this.label10 = new System.Windows.Forms.Label();
             this.lblFecha = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtContrasena = new System.Windows.Forms.TextBox();
+            this.cboxCodigoEmpleado = new System.Windows.Forms.ComboBox();
             this.txtNombreUsuario = new System.Windows.Forms.TextBox();
             this.cboxEstado = new System.Windows.Forms.ComboBox();
             this.cboxRol = new System.Windows.Forms.ComboBox();
@@ -48,8 +50,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.cboxCodigoEmpleado = new System.Windows.Forms.ComboBox();
-            this.txtContrasena = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -60,7 +60,7 @@
             this.btnSalir.IconColor = System.Drawing.Color.Black;
             this.btnSalir.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnSalir.IconSize = 25;
-            this.btnSalir.Location = new System.Drawing.Point(743, 413);
+            this.btnSalir.Location = new System.Drawing.Point(742, 412);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(88, 28);
             this.btnSalir.TabIndex = 79;
@@ -74,7 +74,7 @@
             this.btnEliminar.IconColor = System.Drawing.Color.Black;
             this.btnEliminar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnEliminar.IconSize = 25;
-            this.btnEliminar.Location = new System.Drawing.Point(649, 413);
+            this.btnEliminar.Location = new System.Drawing.Point(648, 412);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(88, 28);
             this.btnEliminar.TabIndex = 78;
@@ -84,9 +84,9 @@
             // 
             // dgvUsuarios
             // 
-            this.dgvUsuarios.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgvUsuarios.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvUsuarios.Location = new System.Drawing.Point(27, 203);
+            this.dgvUsuarios.Location = new System.Drawing.Point(26, 202);
             this.dgvUsuarios.Name = "dgvUsuarios";
             this.dgvUsuarios.ReadOnly = true;
             this.dgvUsuarios.RowHeadersWidth = 51;
@@ -98,7 +98,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Calisto MT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(358, 16);
+            this.label11.Location = new System.Drawing.Point(357, 15);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(98, 20);
             this.label11.TabIndex = 77;
@@ -108,7 +108,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Calisto MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(604, 21);
+            this.label10.Location = new System.Drawing.Point(603, 20);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(80, 15);
             this.label10.TabIndex = 75;
@@ -118,7 +118,7 @@
             // 
             this.lblFecha.AutoSize = true;
             this.lblFecha.Font = new System.Drawing.Font("Calisto MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFecha.Location = new System.Drawing.Point(713, 21);
+            this.lblFecha.Location = new System.Drawing.Point(712, 20);
             this.lblFecha.Name = "lblFecha";
             this.lblFecha.Size = new System.Drawing.Size(95, 15);
             this.lblFecha.TabIndex = 74;
@@ -141,11 +141,27 @@
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(18, 39);
+            this.groupBox1.Location = new System.Drawing.Point(17, 38);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(820, 150);
             this.groupBox1.TabIndex = 76;
             this.groupBox1.TabStop = false;
+            // 
+            // txtContrasena
+            // 
+            this.txtContrasena.Location = new System.Drawing.Point(178, 94);
+            this.txtContrasena.Name = "txtContrasena";
+            this.txtContrasena.Size = new System.Drawing.Size(121, 20);
+            this.txtContrasena.TabIndex = 74;
+            // 
+            // cboxCodigoEmpleado
+            // 
+            this.cboxCodigoEmpleado.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboxCodigoEmpleado.FormattingEnabled = true;
+            this.cboxCodigoEmpleado.Location = new System.Drawing.Point(178, 39);
+            this.cboxCodigoEmpleado.Name = "cboxCodigoEmpleado";
+            this.cboxCodigoEmpleado.Size = new System.Drawing.Size(121, 23);
+            this.cboxCodigoEmpleado.TabIndex = 73;
             // 
             // txtNombreUsuario
             // 
@@ -290,27 +306,11 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Codigo Usuario:";
             // 
-            // cboxCodigoEmpleado
-            // 
-            this.cboxCodigoEmpleado.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboxCodigoEmpleado.FormattingEnabled = true;
-            this.cboxCodigoEmpleado.Location = new System.Drawing.Point(178, 39);
-            this.cboxCodigoEmpleado.Name = "cboxCodigoEmpleado";
-            this.cboxCodigoEmpleado.Size = new System.Drawing.Size(121, 23);
-            this.cboxCodigoEmpleado.TabIndex = 73;
-            // 
-            // txtContrasena
-            // 
-            this.txtContrasena.Location = new System.Drawing.Point(178, 94);
-            this.txtContrasena.Name = "txtContrasena";
-            this.txtContrasena.Size = new System.Drawing.Size(121, 20);
-            this.txtContrasena.TabIndex = 74;
-            // 
             // frmUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(856, 457);
+            this.ClientSize = new System.Drawing.Size(857, 468);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.dgvUsuarios);

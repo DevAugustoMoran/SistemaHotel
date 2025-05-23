@@ -35,6 +35,8 @@
             this.label10 = new System.Windows.Forms.Label();
             this.lblFecha = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cboxEstado = new System.Windows.Forms.ComboBox();
+            this.lblMonto = new System.Windows.Forms.Label();
             this.dtpFechaConsumo = new System.Windows.Forms.DateTimePicker();
             this.cboxCodigoServicio = new System.Windows.Forms.ComboBox();
             this.cboxCodigoReserva = new System.Windows.Forms.ComboBox();
@@ -48,8 +50,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.lblMonto = new System.Windows.Forms.Label();
-            this.cboxEstado = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvConsumos)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -60,7 +60,7 @@
             this.btnSalir.IconColor = System.Drawing.Color.Black;
             this.btnSalir.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnSalir.IconSize = 25;
-            this.btnSalir.Location = new System.Drawing.Point(740, 422);
+            this.btnSalir.Location = new System.Drawing.Point(742, 412);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(88, 28);
             this.btnSalir.TabIndex = 72;
@@ -74,7 +74,7 @@
             this.btnEliminar.IconColor = System.Drawing.Color.Black;
             this.btnEliminar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnEliminar.IconSize = 25;
-            this.btnEliminar.Location = new System.Drawing.Point(646, 422);
+            this.btnEliminar.Location = new System.Drawing.Point(648, 412);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(88, 28);
             this.btnEliminar.TabIndex = 71;
@@ -84,9 +84,9 @@
             // 
             // dgvConsumos
             // 
-            this.dgvConsumos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgvConsumos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvConsumos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvConsumos.Location = new System.Drawing.Point(24, 212);
+            this.dgvConsumos.Location = new System.Drawing.Point(26, 202);
             this.dgvConsumos.Name = "dgvConsumos";
             this.dgvConsumos.ReadOnly = true;
             this.dgvConsumos.RowHeadersWidth = 51;
@@ -98,7 +98,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Calisto MT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(344, 25);
+            this.label11.Location = new System.Drawing.Point(346, 15);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(108, 20);
             this.label11.TabIndex = 70;
@@ -108,7 +108,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Calisto MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(601, 30);
+            this.label10.Location = new System.Drawing.Point(603, 20);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(80, 15);
             this.label10.TabIndex = 68;
@@ -118,7 +118,7 @@
             // 
             this.lblFecha.AutoSize = true;
             this.lblFecha.Font = new System.Drawing.Font("Calisto MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFecha.Location = new System.Drawing.Point(710, 30);
+            this.lblFecha.Location = new System.Drawing.Point(712, 20);
             this.lblFecha.Name = "lblFecha";
             this.lblFecha.Size = new System.Drawing.Size(95, 15);
             this.lblFecha.TabIndex = 67;
@@ -141,11 +141,35 @@
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(15, 48);
+            this.groupBox1.Location = new System.Drawing.Point(17, 38);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(820, 150);
             this.groupBox1.TabIndex = 69;
             this.groupBox1.TabStop = false;
+            // 
+            // cboxEstado
+            // 
+            this.cboxEstado.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboxEstado.FormattingEnabled = true;
+            this.cboxEstado.Items.AddRange(new object[] {
+            "Solicitado",
+            "Progreso",
+            "Finalizado",
+            "Cancelado",
+            "Facturado"});
+            this.cboxEstado.Location = new System.Drawing.Point(462, 16);
+            this.cboxEstado.Name = "cboxEstado";
+            this.cboxEstado.Size = new System.Drawing.Size(121, 23);
+            this.cboxEstado.TabIndex = 68;
+            // 
+            // lblMonto
+            // 
+            this.lblMonto.AutoSize = true;
+            this.lblMonto.Location = new System.Drawing.Point(185, 100);
+            this.lblMonto.Name = "lblMonto";
+            this.lblMonto.Size = new System.Drawing.Size(10, 13);
+            this.lblMonto.TabIndex = 67;
+            this.lblMonto.Text = "-";
             // 
             // dtpFechaConsumo
             // 
@@ -282,35 +306,11 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Codigo Consumo:";
             // 
-            // lblMonto
-            // 
-            this.lblMonto.AutoSize = true;
-            this.lblMonto.Location = new System.Drawing.Point(185, 100);
-            this.lblMonto.Name = "lblMonto";
-            this.lblMonto.Size = new System.Drawing.Size(10, 13);
-            this.lblMonto.TabIndex = 67;
-            this.lblMonto.Text = "-";
-            // 
-            // cboxEstado
-            // 
-            this.cboxEstado.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboxEstado.FormattingEnabled = true;
-            this.cboxEstado.Items.AddRange(new object[] {
-            "Solicitado",
-            "Progreso",
-            "Finalizado",
-            "Cancelado",
-            "Facturado"});
-            this.cboxEstado.Location = new System.Drawing.Point(462, 16);
-            this.cboxEstado.Name = "cboxEstado";
-            this.cboxEstado.Size = new System.Drawing.Size(121, 23);
-            this.cboxEstado.TabIndex = 68;
-            // 
             // frmConsumos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(850, 475);
+            this.ClientSize = new System.Drawing.Size(857, 468);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.dgvConsumos);

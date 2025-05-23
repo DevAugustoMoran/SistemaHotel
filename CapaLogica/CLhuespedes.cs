@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace CapaLogica
 {
-    public class Class1
+    public class CLhuespedes
     {
+        public DateTime MtdFechaHoy()
+        {
+            return DateTime.Now;
+        }
     }
 }

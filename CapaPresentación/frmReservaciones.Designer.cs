@@ -35,6 +35,9 @@
             this.label10 = new System.Windows.Forms.Label();
             this.lblFecha = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.dtpFechaSalida = new System.Windows.Forms.DateTimePicker();
+            this.dtpFechaEntrada = new System.Windows.Forms.DateTimePicker();
+            this.cboxCodigoHabitacion = new System.Windows.Forms.ComboBox();
             this.lblTotal = new System.Windows.Forms.Label();
             this.cboxCodigoHuesped = new System.Windows.Forms.ComboBox();
             this.btnCancelar = new FontAwesome.Sharp.IconButton();
@@ -47,9 +50,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.cboxCodigoHabitacion = new System.Windows.Forms.ComboBox();
-            this.dtpFechaEntrada = new System.Windows.Forms.DateTimePicker();
-            this.dtpFechaSalida = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.dgvReservaciones)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -84,7 +84,7 @@
             // 
             // dgvReservaciones
             // 
-            this.dgvReservaciones.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgvReservaciones.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvReservaciones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvReservaciones.Location = new System.Drawing.Point(26, 202);
             this.dgvReservaciones.Name = "dgvReservaciones";
@@ -98,7 +98,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Calisto MT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(346, 15);
+            this.label11.Location = new System.Drawing.Point(345, 15);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(150, 20);
             this.label11.TabIndex = 63;
@@ -118,7 +118,7 @@
             // 
             this.lblFecha.AutoSize = true;
             this.lblFecha.Font = new System.Drawing.Font("Calisto MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFecha.Location = new System.Drawing.Point(712, 20);
+            this.lblFecha.Location = new System.Drawing.Point(701, 20);
             this.lblFecha.Name = "lblFecha";
             this.lblFecha.Size = new System.Drawing.Size(95, 15);
             this.lblFecha.TabIndex = 60;
@@ -146,6 +146,29 @@
             this.groupBox1.Size = new System.Drawing.Size(820, 150);
             this.groupBox1.TabIndex = 62;
             this.groupBox1.TabStop = false;
+            // 
+            // dtpFechaSalida
+            // 
+            this.dtpFechaSalida.Location = new System.Drawing.Point(178, 121);
+            this.dtpFechaSalida.Name = "dtpFechaSalida";
+            this.dtpFechaSalida.Size = new System.Drawing.Size(121, 20);
+            this.dtpFechaSalida.TabIndex = 66;
+            // 
+            // dtpFechaEntrada
+            // 
+            this.dtpFechaEntrada.Location = new System.Drawing.Point(178, 93);
+            this.dtpFechaEntrada.Name = "dtpFechaEntrada";
+            this.dtpFechaEntrada.Size = new System.Drawing.Size(121, 20);
+            this.dtpFechaEntrada.TabIndex = 65;
+            // 
+            // cboxCodigoHabitacion
+            // 
+            this.cboxCodigoHabitacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboxCodigoHabitacion.FormattingEnabled = true;
+            this.cboxCodigoHabitacion.Location = new System.Drawing.Point(178, 65);
+            this.cboxCodigoHabitacion.Name = "cboxCodigoHabitacion";
+            this.cboxCodigoHabitacion.Size = new System.Drawing.Size(121, 23);
+            this.cboxCodigoHabitacion.TabIndex = 64;
             // 
             // lblTotal
             // 
@@ -274,29 +297,6 @@
             this.label1.Size = new System.Drawing.Size(98, 15);
             this.label1.TabIndex = 1;
             this.label1.Text = "Codigo Reserva:";
-            // 
-            // cboxCodigoHabitacion
-            // 
-            this.cboxCodigoHabitacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboxCodigoHabitacion.FormattingEnabled = true;
-            this.cboxCodigoHabitacion.Location = new System.Drawing.Point(178, 65);
-            this.cboxCodigoHabitacion.Name = "cboxCodigoHabitacion";
-            this.cboxCodigoHabitacion.Size = new System.Drawing.Size(121, 23);
-            this.cboxCodigoHabitacion.TabIndex = 64;
-            // 
-            // dtpFechaEntrada
-            // 
-            this.dtpFechaEntrada.Location = new System.Drawing.Point(178, 93);
-            this.dtpFechaEntrada.Name = "dtpFechaEntrada";
-            this.dtpFechaEntrada.Size = new System.Drawing.Size(121, 20);
-            this.dtpFechaEntrada.TabIndex = 65;
-            // 
-            // dtpFechaSalida
-            // 
-            this.dtpFechaSalida.Location = new System.Drawing.Point(178, 121);
-            this.dtpFechaSalida.Name = "dtpFechaSalida";
-            this.dtpFechaSalida.Size = new System.Drawing.Size(121, 20);
-            this.dtpFechaSalida.TabIndex = 66;
             // 
             // frmReservaciones
             // 

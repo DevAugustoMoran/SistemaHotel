@@ -10,7 +10,7 @@ namespace CapaDatos
 {
     public class Conexión
     {
-        private SqlConnection db_conexion = new SqlConnection("Data Source=UNI-1000914\\SQLEXPRESS;Initial Catalog=db_hotel;Integrated Security=True;Trust Server Certificate=True");
+        private SqlConnection db_conexion = new SqlConnection("Data Source=UNI-1000914\\SQLEXPRESS;Initial Catalog=db_hotel;Integrated Security=True;Encrypt=False");
     
            public SqlConnection MtdAbrirConexion()
            {
