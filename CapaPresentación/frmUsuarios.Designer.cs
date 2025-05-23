@@ -35,6 +35,8 @@
             this.label10 = new System.Windows.Forms.Label();
             this.lblFecha = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtContrasena = new System.Windows.Forms.TextBox();
+            this.cboxCodigoEmpleado = new System.Windows.Forms.ComboBox();
             this.txtNombreUsuario = new System.Windows.Forms.TextBox();
             this.cboxEstado = new System.Windows.Forms.ComboBox();
             this.cboxRol = new System.Windows.Forms.ComboBox();
@@ -48,8 +50,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.cboxCodigoEmpleado = new System.Windows.Forms.ComboBox();
-            this.txtContrasena = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -84,7 +84,7 @@
             // 
             // dgvUsuarios
             // 
-            this.dgvUsuarios.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgvUsuarios.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvUsuarios.Location = new System.Drawing.Point(27, 203);
             this.dgvUsuarios.Name = "dgvUsuarios";
@@ -146,6 +146,22 @@
             this.groupBox1.Size = new System.Drawing.Size(820, 150);
             this.groupBox1.TabIndex = 76;
             this.groupBox1.TabStop = false;
+            // 
+            // txtContrasena
+            // 
+            this.txtContrasena.Location = new System.Drawing.Point(178, 94);
+            this.txtContrasena.Name = "txtContrasena";
+            this.txtContrasena.Size = new System.Drawing.Size(121, 20);
+            this.txtContrasena.TabIndex = 74;
+            // 
+            // cboxCodigoEmpleado
+            // 
+            this.cboxCodigoEmpleado.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboxCodigoEmpleado.FormattingEnabled = true;
+            this.cboxCodigoEmpleado.Location = new System.Drawing.Point(178, 39);
+            this.cboxCodigoEmpleado.Name = "cboxCodigoEmpleado";
+            this.cboxCodigoEmpleado.Size = new System.Drawing.Size(121, 23);
+            this.cboxCodigoEmpleado.TabIndex = 73;
             // 
             // txtNombreUsuario
             // 
@@ -289,22 +305,6 @@
             this.label1.Size = new System.Drawing.Size(98, 15);
             this.label1.TabIndex = 1;
             this.label1.Text = "Codigo Usuario:";
-            // 
-            // cboxCodigoEmpleado
-            // 
-            this.cboxCodigoEmpleado.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboxCodigoEmpleado.FormattingEnabled = true;
-            this.cboxCodigoEmpleado.Location = new System.Drawing.Point(178, 39);
-            this.cboxCodigoEmpleado.Name = "cboxCodigoEmpleado";
-            this.cboxCodigoEmpleado.Size = new System.Drawing.Size(121, 23);
-            this.cboxCodigoEmpleado.TabIndex = 73;
-            // 
-            // txtContrasena
-            // 
-            this.txtContrasena.Location = new System.Drawing.Point(178, 94);
-            this.txtContrasena.Name = "txtContrasena";
-            this.txtContrasena.Size = new System.Drawing.Size(121, 20);
-            this.txtContrasena.TabIndex = 74;
             // 
             // frmUsuarios
             // 

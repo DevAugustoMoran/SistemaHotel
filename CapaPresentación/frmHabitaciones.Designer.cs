@@ -35,6 +35,8 @@
             this.label10 = new System.Windows.Forms.Label();
             this.lblFecha = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtNumero = new System.Windows.Forms.TextBox();
+            this.txtUbicacion = new System.Windows.Forms.TextBox();
             this.cboxEstado = new System.Windows.Forms.ComboBox();
             this.lblPrecio = new System.Windows.Forms.Label();
             this.cboxTipo = new System.Windows.Forms.ComboBox();
@@ -48,8 +50,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtUbicacion = new System.Windows.Forms.TextBox();
-            this.txtNumero = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHabitaciones)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -67,6 +67,7 @@
             this.btnSalir.Text = "Salir";
             this.btnSalir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // btnEliminar
             // 
@@ -81,10 +82,11 @@
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // dgvHabitaciones
             // 
-            this.dgvHabitaciones.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgvHabitaciones.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvHabitaciones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvHabitaciones.Location = new System.Drawing.Point(27, 198);
             this.dgvHabitaciones.Name = "dgvHabitaciones";
@@ -93,6 +95,7 @@
             this.dgvHabitaciones.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvHabitaciones.Size = new System.Drawing.Size(811, 203);
             this.dgvHabitaciones.TabIndex = 73;
+            this.dgvHabitaciones.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvHabitaciones_CellClick);
             // 
             // label11
             // 
@@ -118,7 +121,7 @@
             // 
             this.lblFecha.AutoSize = true;
             this.lblFecha.Font = new System.Drawing.Font("Calisto MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFecha.Location = new System.Drawing.Point(713, 16);
+            this.lblFecha.Location = new System.Drawing.Point(700, 16);
             this.lblFecha.Name = "lblFecha";
             this.lblFecha.Size = new System.Drawing.Size(95, 15);
             this.lblFecha.TabIndex = 74;
@@ -147,6 +150,20 @@
             this.groupBox1.TabIndex = 76;
             this.groupBox1.TabStop = false;
             // 
+            // txtNumero
+            // 
+            this.txtNumero.Location = new System.Drawing.Point(189, 70);
+            this.txtNumero.Name = "txtNumero";
+            this.txtNumero.Size = new System.Drawing.Size(121, 20);
+            this.txtNumero.TabIndex = 70;
+            // 
+            // txtUbicacion
+            // 
+            this.txtUbicacion.Location = new System.Drawing.Point(189, 114);
+            this.txtUbicacion.Name = "txtUbicacion";
+            this.txtUbicacion.Size = new System.Drawing.Size(121, 20);
+            this.txtUbicacion.TabIndex = 69;
+            // 
             // cboxEstado
             // 
             this.cboxEstado.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -156,7 +173,7 @@
             "Reservada",
             "Ocupada",
             "Bloqueada"});
-            this.cboxEstado.Location = new System.Drawing.Point(462, 16);
+            this.cboxEstado.Location = new System.Drawing.Point(485, 111);
             this.cboxEstado.Name = "cboxEstado";
             this.cboxEstado.Size = new System.Drawing.Size(121, 23);
             this.cboxEstado.TabIndex = 68;
@@ -164,7 +181,7 @@
             // lblPrecio
             // 
             this.lblPrecio.AutoSize = true;
-            this.lblPrecio.Location = new System.Drawing.Point(186, 126);
+            this.lblPrecio.Location = new System.Drawing.Point(539, 70);
             this.lblPrecio.Name = "lblPrecio";
             this.lblPrecio.Size = new System.Drawing.Size(10, 13);
             this.lblPrecio.TabIndex = 67;
@@ -180,10 +197,11 @@
             "Familiar",
             "Suite",
             "Presidencial"});
-            this.cboxTipo.Location = new System.Drawing.Point(178, 90);
+            this.cboxTipo.Location = new System.Drawing.Point(485, 20);
             this.cboxTipo.Name = "cboxTipo";
             this.cboxTipo.Size = new System.Drawing.Size(121, 23);
             this.cboxTipo.TabIndex = 64;
+            this.cboxTipo.SelectedIndexChanged += new System.EventHandler(this.cboxTipo_SelectedIndexChanged);
             // 
             // btnCancelar
             // 
@@ -198,6 +216,7 @@
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnEditar
             // 
@@ -212,6 +231,7 @@
             this.btnEditar.Text = "Editar";
             this.btnEditar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // btnAgregar
             // 
@@ -226,12 +246,13 @@
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Calisto MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(6, 126);
+            this.label7.Location = new System.Drawing.Point(386, 70);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(47, 15);
             this.label7.TabIndex = 22;
@@ -241,7 +262,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Calisto MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(6, 98);
+            this.label3.Location = new System.Drawing.Point(386, 24);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(38, 15);
             this.label3.TabIndex = 20;
@@ -249,7 +270,7 @@
             // 
             // txtCodigoHabitacion
             // 
-            this.txtCodigoHabitacion.Location = new System.Drawing.Point(178, 15);
+            this.txtCodigoHabitacion.Location = new System.Drawing.Point(189, 24);
             this.txtCodigoHabitacion.Name = "txtCodigoHabitacion";
             this.txtCodigoHabitacion.ReadOnly = true;
             this.txtCodigoHabitacion.Size = new System.Drawing.Size(121, 20);
@@ -259,7 +280,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Calisto MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(388, 20);
+            this.label5.Location = new System.Drawing.Point(386, 116);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(49, 15);
             this.label5.TabIndex = 7;
@@ -269,7 +290,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Calisto MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(6, 68);
+            this.label4.Location = new System.Drawing.Point(17, 116);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(68, 15);
             this.label4.TabIndex = 5;
@@ -279,7 +300,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Calisto MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(6, 41);
+            this.label2.Location = new System.Drawing.Point(17, 70);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(58, 15);
             this.label2.TabIndex = 2;
@@ -289,25 +310,11 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Calisto MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(6, 15);
+            this.label1.Location = new System.Drawing.Point(17, 24);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(115, 15);
             this.label1.TabIndex = 1;
             this.label1.Text = "Codigo Habitación:";
-            // 
-            // txtUbicacion
-            // 
-            this.txtUbicacion.Location = new System.Drawing.Point(178, 66);
-            this.txtUbicacion.Name = "txtUbicacion";
-            this.txtUbicacion.Size = new System.Drawing.Size(121, 20);
-            this.txtUbicacion.TabIndex = 69;
-            // 
-            // txtNumero
-            // 
-            this.txtNumero.Location = new System.Drawing.Point(178, 41);
-            this.txtNumero.Name = "txtNumero";
-            this.txtNumero.Size = new System.Drawing.Size(121, 20);
-            this.txtNumero.TabIndex = 70;
             // 
             // frmHabitaciones
             // 
@@ -323,6 +330,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "frmHabitaciones";
             this.Text = "frmHabitaciones";
+            this.Load += new System.EventHandler(this.frmHabitaciones_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvHabitaciones)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

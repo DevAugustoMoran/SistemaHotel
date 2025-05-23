@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace CapaDatos
 {
-    internal class CDhuespedes
+    public class CDhuespedes
     {
         Conexión cd_conexion = new Conexión();
 
@@ -34,6 +34,31 @@ namespace CapaDatos
             CommandAgregarHuespedes.Parameters.AddWithValue("@UsuarioSistema", UsuarioSistema);
             CommandAgregarHuespedes.Parameters.AddWithValue("@FechaSistema", FechaSistema);
             CommandAgregarHuespedes.ExecuteNonQuery();
+            cd_conexion.MtdCerrarConexion();
+        }
+
+        public void MtdActualizarHuespedes(int CodigoHuesped, string Nombre, string Nit, string Telefono, string Tipo, string Estado, string UsuarioSistema, DateTime FechaSistema)
+        {
+            string QueryActualizarHuespedes = "Update tbl_huespedes set Nombre = @Nombre, Nit = @Nit, Telefono = @Telefono, Tipo = @Tipo, Estado = @Estado, UsuarioSistema = @UsuarioSistema, FechaSistema = @FechaSistema where CodigoHuesped = @CodigoHuesped";
+            SqlCommand CommandActualizarHuespedes = new SqlCommand(QueryActualizarHuespedes, cd_conexion.MtdAbrirConexion());
+            CommandActualizarHuespedes.Parameters.AddWithValue("@CodigoHuesped", CodigoHuesped);
+            CommandActualizarHuespedes.Parameters.AddWithValue("@Nombre", Nombre);
+            CommandActualizarHuespedes.Parameters.AddWithValue("@Nit", Nit);
+            CommandActualizarHuespedes.Parameters.AddWithValue("@Telefono", Telefono);
+            CommandActualizarHuespedes.Parameters.AddWithValue("@Tipo", Tipo);
+            CommandActualizarHuespedes.Parameters.AddWithValue("@Estado", Estado);
+            CommandActualizarHuespedes.Parameters.AddWithValue("@UsuarioSistema", UsuarioSistema);
+            CommandActualizarHuespedes.Parameters.AddWithValue("@FechaSistema", FechaSistema);
+            CommandActualizarHuespedes.ExecuteNonQuery();
+            cd_conexion.MtdCerrarConexion();
+        }
+
+        public void MtdEliminarHuespedes(int CodigoHuesped)
+        {
+            string QueryEliminarHuespedes = "Delete tbl_huespedes where CodigoHuesped = @CodigoHuesped";
+            SqlCommand CommandEliminarHuespedes = new SqlCommand(QueryEliminarHuespedes, cd_conexion.MtdAbrirConexion());
+            CommandEliminarHuespedes.Parameters.AddWithValue("@CodigoHuesped", CodigoHuesped);
+            CommandEliminarHuespedes.ExecuteNonQuery();
             cd_conexion.MtdCerrarConexion();
         }
     }

@@ -168,5 +168,19 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CapaDatos\CapaDatos.csproj">
+      <Project>{1837e256-f1e3-49f9-8da7-6b49b9d68b94}</Project>
+      <Name>CapaDatos</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CapaLogica\CapaLogica.csproj">
+      <Project>{34782841-5120-4e8b-bc1a-f1b0bf6d35ae}</Project>
+      <Name>CapaLogica</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CapaSeguridad\CapaSeguridad.csproj">
+      <Project>{a51ecf1d-94fc-4397-8670-95cd7bb126d6}</Project>
+      <Name>CapaSeguridad</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

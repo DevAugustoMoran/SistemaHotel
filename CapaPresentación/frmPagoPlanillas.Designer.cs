@@ -35,6 +35,9 @@
             this.label10 = new System.Windows.Forms.Label();
             this.lblFecha = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lblMontoTotal = new System.Windows.Forms.Label();
+            this.lblBono = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.txtHorasExtras = new System.Windows.Forms.TextBox();
             this.cboxEstado = new System.Windows.Forms.ComboBox();
             this.lblSalario = new System.Windows.Forms.Label();
@@ -51,9 +54,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.lblBono = new System.Windows.Forms.Label();
-            this.lblMontoTotal = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPagoPlanillas)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -88,7 +88,7 @@
             // 
             // dgvPagoPlanillas
             // 
-            this.dgvPagoPlanillas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgvPagoPlanillas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvPagoPlanillas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPagoPlanillas.Location = new System.Drawing.Point(20, 208);
             this.dgvPagoPlanillas.Name = "dgvPagoPlanillas";
@@ -154,6 +154,34 @@
             this.groupBox1.Size = new System.Drawing.Size(820, 150);
             this.groupBox1.TabIndex = 76;
             this.groupBox1.TabStop = false;
+            // 
+            // lblMontoTotal
+            // 
+            this.lblMontoTotal.AutoSize = true;
+            this.lblMontoTotal.Location = new System.Drawing.Point(540, 42);
+            this.lblMontoTotal.Name = "lblMontoTotal";
+            this.lblMontoTotal.Size = new System.Drawing.Size(10, 13);
+            this.lblMontoTotal.TabIndex = 75;
+            this.lblMontoTotal.Text = "-";
+            // 
+            // lblBono
+            // 
+            this.lblBono.AutoSize = true;
+            this.lblBono.Location = new System.Drawing.Point(186, 126);
+            this.lblBono.Name = "lblBono";
+            this.lblBono.Size = new System.Drawing.Size(10, 13);
+            this.lblBono.TabIndex = 74;
+            this.lblBono.Text = "-";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Calisto MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(389, 68);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(49, 15);
+            this.label6.TabIndex = 73;
+            this.label6.Text = "Estado:";
             // 
             // txtHorasExtras
             // 
@@ -320,34 +348,6 @@
             this.label1.Size = new System.Drawing.Size(127, 15);
             this.label1.TabIndex = 1;
             this.label1.Text = "Codigo Pago Planilla:";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Calisto MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(389, 68);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(49, 15);
-            this.label6.TabIndex = 73;
-            this.label6.Text = "Estado:";
-            // 
-            // lblBono
-            // 
-            this.lblBono.AutoSize = true;
-            this.lblBono.Location = new System.Drawing.Point(186, 126);
-            this.lblBono.Name = "lblBono";
-            this.lblBono.Size = new System.Drawing.Size(10, 13);
-            this.lblBono.TabIndex = 74;
-            this.lblBono.Text = "-";
-            // 
-            // lblMontoTotal
-            // 
-            this.lblMontoTotal.AutoSize = true;
-            this.lblMontoTotal.Location = new System.Drawing.Point(540, 42);
-            this.lblMontoTotal.Name = "lblMontoTotal";
-            this.lblMontoTotal.Size = new System.Drawing.Size(10, 13);
-            this.lblMontoTotal.TabIndex = 75;
-            this.lblMontoTotal.Text = "-";
             // 
             // frmPagoPlanillas
             // 
