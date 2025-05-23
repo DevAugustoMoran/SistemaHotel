@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CapaPresentacion.Seguridad;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,7 +17,7 @@ namespace CapaPresentación
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmEmpleados());
+            Application.Run(new FrmLogin());
         }
     }
 }

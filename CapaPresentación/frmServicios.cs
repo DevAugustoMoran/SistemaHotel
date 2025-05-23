@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using CapaDatos;
 using CapaLogica;
+using CapaPresentacion.Seguridad;
 
 namespace CapaPresentación
 {
@@ -53,7 +54,7 @@ namespace CapaPresentación
                 DateTime FechaVigencia = dtpFechaVigencia.Value;
                 DateTime FechaVencimiento = dtpFechaVencimiento.Value;
                 string Estado = cboxEstado.Text;
-                string UsuarioSistema = "Usuario"; // Cambiar por el usuario del sistema
+                string UsuarioSistema = UserCache.NombreUsuario;
                 DateTime FechaSistema = cl_servicios.MtdFechaHoy();
 
                 cd_servicios.MtdAgregarServicios(Nombre, Tipo, Precio, FechaVigencia, FechaVencimiento, Estado, UsuarioSistema, FechaSistema);
@@ -79,7 +80,7 @@ namespace CapaPresentación
                 DateTime FechaVigencia = dtpFechaVigencia.Value;
                 DateTime FechaVencimiento = dtpFechaVencimiento.Value;
                 string Estado = cboxEstado.Text;
-                string UsuarioSistema = "Usuario"; // Cambiar por el usuario del sistema
+                string UsuarioSistema = UserCache.NombreUsuario;
                 DateTime FechaSistema = cl_servicios.MtdFechaHoy();
 
                 cd_servicios.MtdActualizarServicios(CodigoServicio, Nombre, Tipo, Precio, FechaVigencia, FechaVencimiento, Estado, UsuarioSistema, FechaSistema);

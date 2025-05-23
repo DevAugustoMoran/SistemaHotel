@@ -64,7 +64,7 @@
             this.btnSalir.IconColor = System.Drawing.Color.Black;
             this.btnSalir.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnSalir.IconSize = 25;
-            this.btnSalir.Location = new System.Drawing.Point(736, 418);
+            this.btnSalir.Location = new System.Drawing.Point(742, 412);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(88, 28);
             this.btnSalir.TabIndex = 79;
@@ -78,7 +78,7 @@
             this.btnEliminar.IconColor = System.Drawing.Color.Black;
             this.btnEliminar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnEliminar.IconSize = 25;
-            this.btnEliminar.Location = new System.Drawing.Point(642, 418);
+            this.btnEliminar.Location = new System.Drawing.Point(648, 412);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(88, 28);
             this.btnEliminar.TabIndex = 78;
@@ -90,7 +90,7 @@
             // 
             this.dgvPagoPlanillas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvPagoPlanillas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPagoPlanillas.Location = new System.Drawing.Point(20, 208);
+            this.dgvPagoPlanillas.Location = new System.Drawing.Point(26, 202);
             this.dgvPagoPlanillas.Name = "dgvPagoPlanillas";
             this.dgvPagoPlanillas.ReadOnly = true;
             this.dgvPagoPlanillas.RowHeadersWidth = 51;
@@ -102,7 +102,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Calisto MT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(351, 21);
+            this.label11.Location = new System.Drawing.Point(335, 15);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(158, 20);
             this.label11.TabIndex = 77;
@@ -112,7 +112,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Calisto MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(597, 26);
+            this.label10.Location = new System.Drawing.Point(603, 20);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(80, 15);
             this.label10.TabIndex = 75;
@@ -122,7 +122,7 @@
             // 
             this.lblFecha.AutoSize = true;
             this.lblFecha.Font = new System.Drawing.Font("Calisto MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFecha.Location = new System.Drawing.Point(706, 26);
+            this.lblFecha.Location = new System.Drawing.Point(712, 20);
             this.lblFecha.Name = "lblFecha";
             this.lblFecha.Size = new System.Drawing.Size(95, 15);
             this.lblFecha.TabIndex = 74;
@@ -149,7 +149,7 @@
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(11, 44);
+            this.groupBox1.Location = new System.Drawing.Point(17, 38);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(820, 150);
             this.groupBox1.TabIndex = 76;
@@ -353,7 +353,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(848, 461);
+            this.ClientSize = new System.Drawing.Size(857, 468);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.dgvPagoPlanillas);

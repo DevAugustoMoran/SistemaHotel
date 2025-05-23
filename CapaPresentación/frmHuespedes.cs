@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using CapaDatos;
 using CapaLogica;
+using CapaPresentacion.Seguridad;
 
 namespace CapaPresentación
 {
@@ -53,7 +54,7 @@ namespace CapaPresentación
                 string Telefono = txtTelefono.Text;
                 string Tipo = cboxTipo.Text;
                 string Estado = cboxEstado.Text;
-                string UsuarioSistema = "Usuario"; // Cambiar por el usuario del sistema
+                string UsuarioSistema = UserCache.NombreUsuario;
                 DateTime FechaSistema = cl_huespedes.MtdFechaHoy();
 
                 cd_huespedes.MtdAgregarHuespedes(Nombre, Nit, Telefono, Tipo, Estado, UsuarioSistema, FechaSistema);
@@ -78,7 +79,7 @@ namespace CapaPresentación
                 string Telefono = txtTelefono.Text;
                 string Tipo = cboxTipo.Text;
                 string Estado = cboxEstado.Text;
-                string UsuarioSistema = "Usuario"; // Cambiar por el usuario del sistema
+                string UsuarioSistema = UserCache.NombreUsuario;
                 DateTime FechaSistema = cl_huespedes.MtdFechaHoy();
 
                 cd_huespedes.MtdActualizarHuespedes(CodigoHuesped, Nombre, Nit, Telefono, Tipo, Estado, UsuarioSistema, FechaSistema);

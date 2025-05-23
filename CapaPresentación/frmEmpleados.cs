@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using CapaDatos;
 using CapaLogica;
+using CapaPresentacion.Seguridad;
 
 namespace CapaPresentación
 {
@@ -52,7 +53,7 @@ namespace CapaPresentación
                 decimal Salario = cl_empleados.MtdSalarioEmpleado(Cargo);
                 DateTime FechaContratacion = dtpFechaContratacion.Value;
                 string Estado = cboxEstado.Text;
-                string UsuarioSistema = "Usuario"; // Cambiar por el usuario del sistema
+                string UsuarioSistema = UserCache.NombreUsuario;
                 DateTime FechaSistema = cl_empleados.MtdFechaHoy();
 
                 cd_empleados.MtdAgregarEmpleados(Nombre, Cargo, Salario, FechaContratacion, Estado, UsuarioSistema, FechaSistema);
@@ -77,7 +78,7 @@ namespace CapaPresentación
                 decimal Salario = cl_empleados.MtdSalarioEmpleado(Cargo);
                 DateTime FechaContratacion = dtpFechaContratacion.Value;
                 string Estado = cboxEstado.Text;
-                string UsuarioSistema = "Usuario"; // Cambiar por el usuario del sistema
+                string UsuarioSistema = UserCache.NombreUsuario;
                 DateTime FechaSistema = cl_empleados.MtdFechaHoy();
 
                 cd_empleados.MtdActualizarEmpleados(CodigoEmpleado, Nombre, Cargo, Salario, FechaContratacion, Estado, UsuarioSistema, FechaSistema);

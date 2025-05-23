@@ -126,6 +126,9 @@ CREATE TABLE tbl_Usuarios
 
 SELECT * FROM tbl_Usuarios;
 
+Insert into tbl_Usuarios(CodigoEmpleado, NombreUsuario, Contrasena, Rol, Estado, UsuarioSistema, FechaSistema) values (1, 'Emp1', '123', 'Admin', 'Activo', 'Admin', '01/01/2025');
+Insert into tbl_Usuarios(CodigoEmpleado, NombreUsuario, Contrasena, Rol, Estado, UsuarioSistema, FechaSistema) values (2, 'Emp2', '123456', 'Supervisor', 'Activo', 'Admin', '01/01/2025');
+
 CREATE TABLE tbl_PagoPlanillas
 (
 	CodigoPagoPlanilla INT PRIMARY KEY IDENTITY(1,1) NOT NULL,
@@ -156,3 +159,6 @@ CREATE TABLE tbl_Empleados
 );
 
 SELECT * FROM tbl_Empleados;
+
+Insert into tbl_Empleados(Nombre, Cargo, Salario, FechaContratacion, Estado, UsuarioSistema, FechaSistema) values ('Empleado 1', 'Gerente', 35000, '01/01/2025', 'Activo', 'Admin', '01/01/2025');
+Insert into tbl_Empleados(Nombre, Cargo, Salario, FechaContratacion, Estado, UsuarioSistema, FechaSistema) values ('Empleado 2', 'Supervisor', 15000, '01/01/2025', 'Activo', 'Supervisor', '01/01/2025');

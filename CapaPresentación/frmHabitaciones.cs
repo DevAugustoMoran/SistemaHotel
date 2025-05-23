@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using CapaDatos;
 using CapaLogica;
+using CapaPresentacion.Seguridad;
 
 namespace CapaPresentación
 {
@@ -53,7 +54,7 @@ namespace CapaPresentación
                 string Tipo = cboxTipo.Text;
                 decimal Precio = cl_habitaciones.MtdPrecioHabitacion(Tipo);
                 string Estado = cboxEstado.Text;
-                string UsuarioSistema = "Usuario"; // Cambiar por el usuario del sistema
+                string UsuarioSistema = UserCache.NombreUsuario;
                 DateTime FechaSistema = cl_habitaciones.MtdFechaHoy();
 
                 cd_habitaciones.MtdAgregarHabitaciones(Numero, Ubicacion, Tipo, Precio, Estado, UsuarioSistema, FechaSistema);
@@ -78,7 +79,7 @@ namespace CapaPresentación
                 string Tipo = cboxTipo.Text;
                 decimal Precio = cl_habitaciones.MtdPrecioHabitacion(Tipo);
                 string Estado = cboxEstado.Text;
-                string UsuarioSistema = "Usuario"; // Cambiar por el usuario del sistema
+                string UsuarioSistema = UserCache.NombreUsuario;
                 DateTime FechaSistema = cl_habitaciones.MtdFechaHoy();
 
                 cd_habitaciones.MtdActualizarHabitaciones(CodigoHabitacion, Numero, Ubicacion, Tipo, Precio, Estado, UsuarioSistema, FechaSistema);

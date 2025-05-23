@@ -98,7 +98,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Calisto MT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(346, 15);
+            this.label11.Location = new System.Drawing.Point(345, 15);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(150, 20);
             this.label11.TabIndex = 63;
@@ -118,7 +118,7 @@
             // 
             this.lblFecha.AutoSize = true;
             this.lblFecha.Font = new System.Drawing.Font("Calisto MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFecha.Location = new System.Drawing.Point(712, 20);
+            this.lblFecha.Location = new System.Drawing.Point(701, 20);
             this.lblFecha.Name = "lblFecha";
             this.lblFecha.Size = new System.Drawing.Size(95, 15);
             this.lblFecha.TabIndex = 60;
