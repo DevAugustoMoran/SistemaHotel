@@ -34,6 +34,20 @@ CREATE TABLE tbl_Pagos
 
 SELECT * FROM tbl_Pagos;
 
+Insert into tbl_Pagos(CodigoReserva, Monto, Propina, Impuesto, Descuento, TotalPago, FechaPago, MetodoPago, UsuarioSistema, FechaSistema) values (@CodigoReserva, @Monto, @Propina, @Impuesto, @Descuento, @TotalPago, @FechaPago, @MetodoPago, @UsuarioSistema, @FechaSistema);
+
+Update tbl_Pagos
+set CodigoReserva = @CodigoReserva, 
+Monto = @Monto,
+Propina = @Propina, 
+Impuesto = @Impuesto, 
+Descuento = @Descuento,
+TotalPago = @TotalPago,
+FechaPago = @FechaPago,
+MetodoPago = @MetodoPago,
+UsuarioSistema = @UsuarioSistema, 
+FechaSistema = @FechaSistema where CodigoPago = @CodigoPago;
+
 CREATE TABLE tbl_Reservaciones
 (
 	CodigoReserva INT PRIMARY KEY IDENTITY(1,1) NOT NULL,
@@ -49,6 +63,17 @@ CREATE TABLE tbl_Reservaciones
 );
 
 SELECT * FROM tbl_Reservaciones;
+
+Insert into tbl_Reservaciones(CodigoHuesped, CodigoHabitacion, FechaEntrada, FechaSalida, Total, UsuarioSistema, FechaSistema) values (@CodigoHuesped, @CodigoHabitacion, @FechaEntrada, @FechaSalida, @Total, @UsuarioSistema, @FechaSistema);
+
+Update tbl_Reservaciones
+set CodigoHuesped = @CodigoHuesped, 
+CodigoHabitacion = @CodigoHabitacion,
+FechaEntrada = @FechaEntrada, 
+FechaSalida = @FechaSalida, 
+Total = @Total, 
+UsuarioSistema = @UsuarioSistema, 
+FechaSistema = @FechaSistema where CodigoReserva = @CodigoReserva;
 
 CREATE TABLE tbl_Habitaciones
 (
@@ -80,6 +105,17 @@ CREATE TABLE tbl_Asignaciones
 
 SELECT * FROM tbl_Asignaciones;
 
+Insert into tbl_Asignaciones(CodigoEmpleado, CodigoHabitacion, TipoAsignacion, FechaAsignacion, Estado, UsuarioSistema, FechaSistema) values (@CodigoEmpleado, @CodigoHabitacion, @TipoAsignacion, @FechaAsignacion, @Estado, @UsuarioSistema, @FechaSistema);
+
+Update tbl_Asignaciones
+set CodigoEmpleado = @CodigoEmpleado, 
+CodigoHabitacion = @CodigoHabitacion,
+TipoAsignacion = @TipoAsignacion, 
+FechaAsignacion = @FechaAsignacion, 
+Estado = @Estado, 
+UsuarioSistema = @UsuarioSistema, 
+FechaSistema = @FechaSistema where CodigoAsignacion = @CodigoAsignacion;
+
 CREATE TABLE tbl_Consumos
 (
 	CodigoConsumo INT PRIMARY KEY IDENTITY(1,1) NOT NULL,
@@ -95,6 +131,17 @@ CREATE TABLE tbl_Consumos
 );
 
 SELECT * FROM tbl_Consumos;
+
+Insert into tbl_Consumos(CodigoReserva, CodigoServicio, Monto, FechaConsumo, Estado, UsuarioSistema, FechaSistema) values (@CodigoReserva, @CodigoServicio, @Monto, @FechaConsumo, @Estado, @UsuarioSistema, @FechaSistema);
+
+Update tbl_Consumos
+set CodigoReserva = @CodigoReserva, 
+CodigoServicio = @CodigoServicio,
+Monto = @Monto, 
+FechaConsumo = @FechaConsumo, 
+Estado = @Estado, 
+UsuarioSistema = @UsuarioSistema, 
+FechaSistema = @FechaSistema where CodigoConsumo = @CodigoConsumo;
 
 CREATE TABLE tbl_Servicios
 (
@@ -128,6 +175,16 @@ SELECT * FROM tbl_Usuarios;
 
 Insert into tbl_Usuarios(CodigoEmpleado, NombreUsuario, Contrasena, Rol, Estado, UsuarioSistema, FechaSistema) values (1, 'Emp1', '123', 'Admin', 'Activo', 'Admin', '01/01/2025');
 Insert into tbl_Usuarios(CodigoEmpleado, NombreUsuario, Contrasena, Rol, Estado, UsuarioSistema, FechaSistema) values (2, 'Emp2', '123456', 'Supervisor', 'Activo', 'Admin', '01/01/2025');
+Insert into tbl_Usuarios(CodigoEmpleado, NombreUsuario, Contrasena, Rol, Estado, UsuarioSistema, FechaSistema) values (@CodigoEmpleado, @NombreUsuario, @Contrasena, @Rol, @Estado, @UsuarioSistema, @FechaSistema);
+
+Update tbl_Usuarios
+set CodigoEmpleado = @CodigoEmpleado, 
+NombreUsuario = @NombreUsuario,
+Contrasena = @Contrasena, 
+Rol = @Rol,
+Estado = @Estado,
+UsuarioSistema = @UsuarioSistema,
+FechaSistema = @FechaSistema where CodigoUsuario = @CodigoUsuario;
 
 CREATE TABLE tbl_PagoPlanillas
 (
@@ -146,6 +203,19 @@ CREATE TABLE tbl_PagoPlanillas
 
 SELECT * FROM tbl_PagoPlanillas;
 
+Insert into tbl_PagoPlanillas(CodigoEmpleado, FechaPago, Salario, Bono, HorasExtras, MontoTotal, Estado, UsuarioSistema, FechaSistema) values (@CodigoEmpleado, @FechaPago, @Salario, @Bono, @HorasExtras, @MontoTotal, @Estado, @UsuarioSistema, @FechaSistema);
+
+Update tbl_PagoPlanillas
+set CodigoEmpleado = @CodigoEmpleado, 
+FechaPago = @FechaPago,
+Salario = @Salario, 
+Bono = @Bono,
+HorasExtras = @HorasExtras,
+MontoTotal = @MontoTotal,
+Estado = @Estado, 
+UsuarioSistema = @UsuarioSistema, 
+FechaSistema = @FechaSistema where CodigoPagoPlanilla = @CodigoPagoPlanilla;
+
 CREATE TABLE tbl_Empleados
 (
 	CodigoEmpleado INT PRIMARY KEY IDENTITY(1,1) NOT NULL,
@@ -162,3 +232,7 @@ SELECT * FROM tbl_Empleados;
 
 Insert into tbl_Empleados(Nombre, Cargo, Salario, FechaContratacion, Estado, UsuarioSistema, FechaSistema) values ('Empleado 1', 'Gerente', 35000, '01/01/2025', 'Activo', 'Admin', '01/01/2025');
 Insert into tbl_Empleados(Nombre, Cargo, Salario, FechaContratacion, Estado, UsuarioSistema, FechaSistema) values ('Empleado 2', 'Supervisor', 15000, '01/01/2025', 'Activo', 'Supervisor', '01/01/2025');
+
+Select CodigoHabitacion, Tipo from tbl_Habitaciones;
+
+Select * from tbl_Habitaciones;
