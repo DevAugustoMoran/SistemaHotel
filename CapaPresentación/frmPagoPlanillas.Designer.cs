@@ -158,7 +158,7 @@
             // lblMontoTotal
             // 
             this.lblMontoTotal.AutoSize = true;
-            this.lblMontoTotal.Location = new System.Drawing.Point(540, 42);
+            this.lblMontoTotal.Location = new System.Drawing.Point(509, 72);
             this.lblMontoTotal.Name = "lblMontoTotal";
             this.lblMontoTotal.Size = new System.Drawing.Size(10, 13);
             this.lblMontoTotal.TabIndex = 75;
@@ -177,7 +177,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Calisto MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(389, 68);
+            this.label6.Location = new System.Drawing.Point(358, 120);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(49, 15);
             this.label6.TabIndex = 73;
@@ -185,7 +185,7 @@
             // 
             // txtHorasExtras
             // 
-            this.txtHorasExtras.Location = new System.Drawing.Point(532, 14);
+            this.txtHorasExtras.Location = new System.Drawing.Point(501, 20);
             this.txtHorasExtras.Name = "txtHorasExtras";
             this.txtHorasExtras.Size = new System.Drawing.Size(121, 20);
             this.txtHorasExtras.TabIndex = 72;
@@ -199,7 +199,7 @@
             "Proceso",
             "Pagado",
             "Rechazado"});
-            this.cboxEstado.Location = new System.Drawing.Point(532, 62);
+            this.cboxEstado.Location = new System.Drawing.Point(501, 114);
             this.cboxEstado.Name = "cboxEstado";
             this.cboxEstado.Size = new System.Drawing.Size(121, 23);
             this.cboxEstado.TabIndex = 71;
@@ -217,7 +217,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Calisto MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(389, 40);
+            this.label8.Location = new System.Drawing.Point(358, 70);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(82, 15);
             this.label8.TabIndex = 67;
@@ -225,6 +225,7 @@
             // 
             // dtpFechaPago
             // 
+            this.dtpFechaPago.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpFechaPago.Location = new System.Drawing.Point(178, 68);
             this.dtpFechaPago.Name = "dtpFechaPago";
             this.dtpFechaPago.Size = new System.Drawing.Size(121, 20);
@@ -313,7 +314,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Calisto MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(389, 15);
+            this.label5.Location = new System.Drawing.Point(358, 21);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(83, 15);
             this.label5.TabIndex = 7;

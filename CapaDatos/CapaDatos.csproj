@@ -49,10 +49,16 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CDasignaciones.cs" />
+    <Compile Include="CDconsumos.cs" />
     <Compile Include="CDempleados.cs" />
     <Compile Include="CDhabitaciones.cs" />
     <Compile Include="CDhuespedes.cs" />
+    <Compile Include="CDpagoPlanillas.cs" />
+    <Compile Include="CDpagos.cs" />
+    <Compile Include="CDreservaciones.cs" />
     <Compile Include="CDservicios.cs" />
+    <Compile Include="CDusuarios.cs" />
     <Compile Include="Conexión.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

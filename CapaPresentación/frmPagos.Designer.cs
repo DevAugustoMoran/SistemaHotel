@@ -162,7 +162,7 @@
             // lblTotalPago
             // 
             this.lblTotalPago.AutoSize = true;
-            this.lblTotalPago.Location = new System.Drawing.Point(507, 40);
+            this.lblTotalPago.Location = new System.Drawing.Point(506, 52);
             this.lblTotalPago.Name = "lblTotalPago";
             this.lblTotalPago.Size = new System.Drawing.Size(10, 13);
             this.lblTotalPago.TabIndex = 63;
@@ -171,7 +171,7 @@
             // lblDescuento
             // 
             this.lblDescuento.AutoSize = true;
-            this.lblDescuento.Location = new System.Drawing.Point(507, 18);
+            this.lblDescuento.Location = new System.Drawing.Point(506, 22);
             this.lblDescuento.Name = "lblDescuento";
             this.lblDescuento.Size = new System.Drawing.Size(10, 13);
             this.lblDescuento.TabIndex = 62;
@@ -215,7 +215,8 @@
             // 
             // dtpFechaPago
             // 
-            this.dtpFechaPago.Location = new System.Drawing.Point(505, 66);
+            this.dtpFechaPago.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpFechaPago.Location = new System.Drawing.Point(504, 83);
             this.dtpFechaPago.Name = "dtpFechaPago";
             this.dtpFechaPago.Size = new System.Drawing.Size(121, 20);
             this.dtpFechaPago.TabIndex = 57;
@@ -228,7 +229,7 @@
             "Efectivo",
             "Tarjeta",
             "Transferencia"});
-            this.cboxMetodoPago.Location = new System.Drawing.Point(505, 90);
+            this.cboxMetodoPago.Location = new System.Drawing.Point(504, 112);
             this.cboxMetodoPago.Name = "cboxMetodoPago";
             this.cboxMetodoPago.Size = new System.Drawing.Size(121, 23);
             this.cboxMetodoPago.TabIndex = 56;
@@ -237,7 +238,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Calisto MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(358, 98);
+            this.label9.Location = new System.Drawing.Point(357, 120);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(82, 15);
             this.label9.TabIndex = 55;
@@ -247,7 +248,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Calisto MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(358, 68);
+            this.label8.Location = new System.Drawing.Point(357, 85);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(74, 15);
             this.label8.TabIndex = 54;
@@ -257,7 +258,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Calisto MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(358, 40);
+            this.label6.Location = new System.Drawing.Point(357, 52);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(71, 15);
             this.label6.TabIndex = 53;
@@ -337,7 +338,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Calisto MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(358, 15);
+            this.label5.Location = new System.Drawing.Point(357, 19);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(70, 15);
             this.label5.TabIndex = 7;

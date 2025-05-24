@@ -149,7 +149,7 @@
             // 
             // txtContrasena
             // 
-            this.txtContrasena.Location = new System.Drawing.Point(178, 94);
+            this.txtContrasena.Location = new System.Drawing.Point(476, 14);
             this.txtContrasena.Name = "txtContrasena";
             this.txtContrasena.Size = new System.Drawing.Size(121, 20);
             this.txtContrasena.TabIndex = 74;
@@ -158,14 +158,14 @@
             // 
             this.cboxCodigoEmpleado.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboxCodigoEmpleado.FormattingEnabled = true;
-            this.cboxCodigoEmpleado.Location = new System.Drawing.Point(178, 39);
+            this.cboxCodigoEmpleado.Location = new System.Drawing.Point(185, 69);
             this.cboxCodigoEmpleado.Name = "cboxCodigoEmpleado";
             this.cboxCodigoEmpleado.Size = new System.Drawing.Size(121, 23);
             this.cboxCodigoEmpleado.TabIndex = 73;
             // 
             // txtNombreUsuario
             // 
-            this.txtNombreUsuario.Location = new System.Drawing.Point(178, 66);
+            this.txtNombreUsuario.Location = new System.Drawing.Point(185, 121);
             this.txtNombreUsuario.Name = "txtNombreUsuario";
             this.txtNombreUsuario.Size = new System.Drawing.Size(121, 20);
             this.txtNombreUsuario.TabIndex = 72;
@@ -177,7 +177,7 @@
             this.cboxEstado.Items.AddRange(new object[] {
             "Activo",
             "Inactivo"});
-            this.cboxEstado.Location = new System.Drawing.Point(484, 14);
+            this.cboxEstado.Location = new System.Drawing.Point(476, 119);
             this.cboxEstado.Name = "cboxEstado";
             this.cboxEstado.Size = new System.Drawing.Size(121, 23);
             this.cboxEstado.TabIndex = 71;
@@ -191,7 +191,7 @@
             "Ejecutivo",
             "Asistente",
             "Digitador"});
-            this.cboxRol.Location = new System.Drawing.Point(178, 119);
+            this.cboxRol.Location = new System.Drawing.Point(476, 66);
             this.cboxRol.Name = "cboxRol";
             this.cboxRol.Size = new System.Drawing.Size(121, 23);
             this.cboxRol.TabIndex = 64;
@@ -242,7 +242,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Calisto MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(6, 126);
+            this.label7.Location = new System.Drawing.Point(373, 71);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(31, 15);
             this.label7.TabIndex = 22;
@@ -252,7 +252,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Calisto MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(6, 98);
+            this.label3.Location = new System.Drawing.Point(373, 18);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(73, 15);
             this.label3.TabIndex = 20;
@@ -260,7 +260,7 @@
             // 
             // txtCodigoUsuario
             // 
-            this.txtCodigoUsuario.Location = new System.Drawing.Point(178, 15);
+            this.txtCodigoUsuario.Location = new System.Drawing.Point(185, 18);
             this.txtCodigoUsuario.Name = "txtCodigoUsuario";
             this.txtCodigoUsuario.ReadOnly = true;
             this.txtCodigoUsuario.Size = new System.Drawing.Size(121, 20);
@@ -270,7 +270,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Calisto MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(389, 15);
+            this.label5.Location = new System.Drawing.Point(373, 123);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(49, 15);
             this.label5.TabIndex = 7;
@@ -280,7 +280,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Calisto MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(6, 68);
+            this.label4.Location = new System.Drawing.Point(13, 123);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(105, 15);
             this.label4.TabIndex = 5;
@@ -290,7 +290,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Calisto MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(6, 41);
+            this.label2.Location = new System.Drawing.Point(13, 71);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(111, 15);
             this.label2.TabIndex = 2;
@@ -300,7 +300,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Calisto MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(6, 15);
+            this.label1.Location = new System.Drawing.Point(13, 18);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(98, 15);
             this.label1.TabIndex = 1;

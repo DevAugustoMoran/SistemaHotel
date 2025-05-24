@@ -149,14 +149,16 @@
             // 
             // dtpFechaSalida
             // 
-            this.dtpFechaSalida.Location = new System.Drawing.Point(178, 121);
+            this.dtpFechaSalida.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpFechaSalida.Location = new System.Drawing.Point(502, 64);
             this.dtpFechaSalida.Name = "dtpFechaSalida";
             this.dtpFechaSalida.Size = new System.Drawing.Size(121, 20);
             this.dtpFechaSalida.TabIndex = 66;
             // 
             // dtpFechaEntrada
             // 
-            this.dtpFechaEntrada.Location = new System.Drawing.Point(178, 93);
+            this.dtpFechaEntrada.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpFechaEntrada.Location = new System.Drawing.Point(502, 21);
             this.dtpFechaEntrada.Name = "dtpFechaEntrada";
             this.dtpFechaEntrada.Size = new System.Drawing.Size(121, 20);
             this.dtpFechaEntrada.TabIndex = 65;
@@ -165,7 +167,7 @@
             // 
             this.cboxCodigoHabitacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboxCodigoHabitacion.FormattingEnabled = true;
-            this.cboxCodigoHabitacion.Location = new System.Drawing.Point(178, 65);
+            this.cboxCodigoHabitacion.Location = new System.Drawing.Point(183, 110);
             this.cboxCodigoHabitacion.Name = "cboxCodigoHabitacion";
             this.cboxCodigoHabitacion.Size = new System.Drawing.Size(121, 23);
             this.cboxCodigoHabitacion.TabIndex = 64;
@@ -173,7 +175,7 @@
             // lblTotal
             // 
             this.lblTotal.AutoSize = true;
-            this.lblTotal.Location = new System.Drawing.Point(503, 67);
+            this.lblTotal.Location = new System.Drawing.Point(499, 116);
             this.lblTotal.Name = "lblTotal";
             this.lblTotal.Size = new System.Drawing.Size(10, 13);
             this.lblTotal.TabIndex = 63;
@@ -183,7 +185,7 @@
             // 
             this.cboxCodigoHuesped.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboxCodigoHuesped.FormattingEnabled = true;
-            this.cboxCodigoHuesped.Location = new System.Drawing.Point(178, 38);
+            this.cboxCodigoHuesped.Location = new System.Drawing.Point(183, 66);
             this.cboxCodigoHuesped.Name = "cboxCodigoHuesped";
             this.cboxCodigoHuesped.Size = new System.Drawing.Size(121, 23);
             this.cboxCodigoHuesped.TabIndex = 58;
@@ -234,7 +236,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Calisto MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(6, 126);
+            this.label7.Location = new System.Drawing.Point(360, 67);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(81, 15);
             this.label7.TabIndex = 22;
@@ -244,7 +246,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Calisto MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(6, 98);
+            this.label3.Location = new System.Drawing.Point(360, 26);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(91, 15);
             this.label3.TabIndex = 20;
@@ -252,7 +254,7 @@
             // 
             // txtCodigoReserva
             // 
-            this.txtCodigoReserva.Location = new System.Drawing.Point(178, 15);
+            this.txtCodigoReserva.Location = new System.Drawing.Point(183, 26);
             this.txtCodigoReserva.Name = "txtCodigoReserva";
             this.txtCodigoReserva.ReadOnly = true;
             this.txtCodigoReserva.Size = new System.Drawing.Size(121, 20);
@@ -262,7 +264,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Calisto MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(383, 66);
+            this.label5.Location = new System.Drawing.Point(360, 109);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(41, 15);
             this.label5.TabIndex = 7;
@@ -272,7 +274,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Calisto MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(6, 68);
+            this.label4.Location = new System.Drawing.Point(11, 114);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(115, 15);
             this.label4.TabIndex = 5;
@@ -282,7 +284,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Calisto MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(6, 41);
+            this.label2.Location = new System.Drawing.Point(11, 70);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(102, 15);
             this.label2.TabIndex = 2;
@@ -292,7 +294,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Calisto MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(6, 15);
+            this.label1.Location = new System.Drawing.Point(11, 26);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(98, 15);
             this.label1.TabIndex = 1;
@@ -312,6 +314,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "frmReservaciones";
             this.Text = "frmReservaciones";
+            this.Load += new System.EventHandler(this.frmReservaciones_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvReservaciones)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
