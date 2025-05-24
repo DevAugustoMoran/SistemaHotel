@@ -240,11 +240,11 @@
             // 
             // btnCancelar
             // 
-            this.btnCancelar.IconChar = FontAwesome.Sharp.IconChar.SquarePen;
+            this.btnCancelar.IconChar = FontAwesome.Sharp.IconChar.Remove;
             this.btnCancelar.IconColor = System.Drawing.Color.Black;
             this.btnCancelar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnCancelar.IconSize = 25;
-            this.btnCancelar.Location = new System.Drawing.Point(702, 97);
+            this.btnCancelar.Location = new System.Drawing.Point(701, 97);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(88, 28);
             this.btnCancelar.TabIndex = 49;
@@ -255,7 +255,7 @@
             // 
             // btnEditar
             // 
-            this.btnEditar.IconChar = FontAwesome.Sharp.IconChar.Remove;
+            this.btnEditar.IconChar = FontAwesome.Sharp.IconChar.SquarePen;
             this.btnEditar.IconColor = System.Drawing.Color.Black;
             this.btnEditar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnEditar.IconSize = 25;
