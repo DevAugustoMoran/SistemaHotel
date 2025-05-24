@@ -13,7 +13,7 @@ namespace CapaPresentacion.Seguridad
         private readonly string connectionString;
         public UserConnectionToSql()
         {
-            connectionString = "Data Source=UNI-1000914\\SQLEXPRESS;Initial Catalog=db_hotel;Integrated Security=True;Encrypt=False";
+            connectionString = "Data Source=AUGUSTOPC\\SQLEXPRESS;Initial Catalog=db_hotel;Integrated Security=True;Encrypt=False";
         }
         protected SqlConnection GetConnection()
         {

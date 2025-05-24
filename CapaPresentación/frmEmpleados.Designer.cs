@@ -206,7 +206,7 @@
             // 
             // btnCancelar
             // 
-            this.btnCancelar.IconChar = FontAwesome.Sharp.IconChar.SquarePen;
+            this.btnCancelar.IconChar = FontAwesome.Sharp.IconChar.Remove;
             this.btnCancelar.IconColor = System.Drawing.Color.Black;
             this.btnCancelar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnCancelar.IconSize = 25;
@@ -221,7 +221,7 @@
             // 
             // btnEditar
             // 
-            this.btnEditar.IconChar = FontAwesome.Sharp.IconChar.Remove;
+            this.btnEditar.IconChar = FontAwesome.Sharp.IconChar.SquarePen;
             this.btnEditar.IconColor = System.Drawing.Color.Black;
             this.btnEditar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnEditar.IconSize = 25;
