@@ -26,7 +26,7 @@ namespace CapaPresentación
         private void frmHabitaciones_Load(object sender, EventArgs e)
         {
             MtdConsultarHabitaciones();
-            lblFecha.Text = cl_habitaciones.MtdFechaHoy().ToString();
+            lblFecha.Text = cl_habitaciones.MtdFechaHoy().ToString("dd/MM/yyyy");
         }
 
         public void MtdConsultarHabitaciones()

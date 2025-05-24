@@ -12,6 +12,26 @@ namespace CapaDatos
     {
         Conexión cd_conexion = new Conexión();
 
+        public List<dynamic> MtdListarEmpleados()
+        {
+            List<dynamic> ListaEmpleados = new List<dynamic>();
+            string QueryListaEmpleados = "Select CodigoEmpleado, Nombre from tbl_Empleados";
+            SqlCommand cmd = new SqlCommand(QueryListaEmpleados, cd_conexion.MtdAbrirConexion());
+            SqlDataReader reader = cmd.ExecuteReader();
+
+            while (reader.Read())
+            {
+                ListaEmpleados.Add(new
+                {
+                    Value = reader["CodigoEmpleado"],
+                    Text = $"{reader["CodigoEmpleado"]} - {reader["Nombre"]}"
+                });
+            }
+
+            cd_conexion.MtdCerrarConexion();
+            return ListaEmpleados;
+        }
+
         public DataTable MtdConsultarUsuarios()
         {
             string QueryConsultarUsuarios = "Select * from tbl_Usuarios";

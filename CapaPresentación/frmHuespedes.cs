@@ -26,7 +26,7 @@ namespace CapaPresentación
         private void frmHuespedes_Load(object sender, EventArgs e)
         {
             MtdConsultarHuespedes();
-            lblFecha.Text = cl_huespedes.MtdFechaHoy().ToString();
+            lblFecha.Text = cl_huespedes.MtdFechaHoy().ToString("dd/MM/yyyy");
         }
 
         public void MtdConsultarHuespedes()
