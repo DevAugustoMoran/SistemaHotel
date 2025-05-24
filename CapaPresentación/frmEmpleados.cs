@@ -26,7 +26,7 @@ namespace CapaPresentación
         private void frmEmpleados_Load(object sender, EventArgs e)
         {
             MtdConsultarEmpleados();
-            lblFecha.Text = cl_empleados.MtdFechaHoy().ToString();
+            lblFecha.Text = cl_empleados.MtdFechaHoy().ToString("dd/MM/yyyy");
         }
 
         public void MtdConsultarEmpleados()

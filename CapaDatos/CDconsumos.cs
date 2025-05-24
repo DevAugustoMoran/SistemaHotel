@@ -12,6 +12,68 @@ namespace CapaDatos
     {
         Conexión cd_conexion = new Conexión();
 
+        public List<dynamic> MtdListarReservas()
+        {
+            List<dynamic> ListaReservas = new List<dynamic>();
+            string QueryListaReservas = "Select CodigoReserva from tbl_Reservaciones";
+            SqlCommand cmd = new SqlCommand(QueryListaReservas, cd_conexion.MtdAbrirConexion());
+            SqlDataReader reader = cmd.ExecuteReader();
+
+            while (reader.Read())
+            {
+                ListaReservas.Add(new
+                {
+                    Value = reader["CodigoReserva"],
+                    Text = reader["CodigoReserva"]
+                });
+            }
+
+            cd_conexion.MtdCerrarConexion();
+            return ListaReservas;
+        }
+
+        public List<dynamic> MtdListarServicios()
+        {
+            List<dynamic> ListaServicios = new List<dynamic>();
+            string QueryListaServicios = "Select CodigoServicio, Nombre from tbl_Servicios";
+            SqlCommand cmd = new SqlCommand(QueryListaServicios, cd_conexion.MtdAbrirConexion());
+            SqlDataReader reader = cmd.ExecuteReader();
+
+            while (reader.Read())
+            {
+                ListaServicios.Add(new
+                {
+                    Value = reader["CodigoServicio"],
+                    Text = $"{reader["CodigoServicio"]} - {reader["Nombre"]}"
+                });
+            }
+
+            cd_conexion.MtdCerrarConexion();
+            return ListaServicios;
+        }
+
+        public Decimal MtdMontoConsumo(int CodigoServicio)
+        {
+            decimal MontoConsumo = 0;
+
+            string QueryConsultarMontoConsumo = "Select Precio from tbl_Servicios where CodigoServicio = @CodigoServicio";
+            SqlCommand CommandMontoConsumo = new SqlCommand(QueryConsultarMontoConsumo, cd_conexion.MtdAbrirConexion());
+            CommandMontoConsumo.Parameters.AddWithValue("@CodigoServicio", CodigoServicio);
+            SqlDataReader reader = CommandMontoConsumo.ExecuteReader();
+
+            if (reader.Read())
+            {
+                MontoConsumo = decimal.Parse(reader["Precio"].ToString());
+            }
+            else
+            {
+                MontoConsumo = 0;
+            }
+
+            cd_conexion.MtdCerrarConexion();
+            return MontoConsumo;
+        }
+
         public DataTable MtdConsultarConsumos()
         {
             string QueryConsultarConsumos = "Select * from tbl_Consumos";

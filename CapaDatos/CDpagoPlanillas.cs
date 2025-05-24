@@ -12,6 +12,48 @@ namespace CapaDatos
     {
         Conexión cd_conexion = new Conexión();
 
+        public List<dynamic> MtdListarEmpleados()
+        {
+            List<dynamic> ListaEmpleados = new List<dynamic>();
+            string QueryListaEmpleados = "Select CodigoEmpleado, Nombre from tbl_Empleados";
+            SqlCommand cmd = new SqlCommand(QueryListaEmpleados, cd_conexion.MtdAbrirConexion());
+            SqlDataReader reader = cmd.ExecuteReader();
+
+            while (reader.Read())
+            {
+                ListaEmpleados.Add(new
+                {
+                    Value = reader["CodigoEmpleado"],
+                    Text = $"{reader["CodigoEmpleado"]} - {reader["Nombre"]}"
+                });
+            }
+
+            cd_conexion.MtdCerrarConexion();
+            return ListaEmpleados;
+        }
+
+        public Decimal MtdSalarioPlanilla(int CodigoEmpleado)
+        {
+            decimal SalarioPlanilla = 0;
+
+            string QueryConsultarSalarioPlanilla = "Select Salario from tbl_Empleados where CodigoEmpleado = @CodigoEmpleado";
+            SqlCommand CommandSalarioPlanilla = new SqlCommand(QueryConsultarSalarioPlanilla, cd_conexion.MtdAbrirConexion());
+            CommandSalarioPlanilla.Parameters.AddWithValue("@CodigoEmpleado", CodigoEmpleado);
+            SqlDataReader reader = CommandSalarioPlanilla.ExecuteReader();
+
+            if (reader.Read())
+            {
+                SalarioPlanilla = decimal.Parse(reader["Salario"].ToString());
+            }
+            else
+            {
+                SalarioPlanilla = 0;
+            }
+
+            cd_conexion.MtdCerrarConexion();
+            return SalarioPlanilla;
+        }
+
         public DataTable MtdConsultarPlanillas()
         {
             string QueryConsultarPlanillas = "Select * from tbl_PagoPlanillas";
@@ -59,7 +101,7 @@ namespace CapaDatos
 
         public void MtdEliminarPlanillas(int CodigoPagoPlanilla)
         {
-            string QueryEliminarPlanillas = "Delete tbl_Empleados where CodigoPagoPlanilla = @CodigoPagoPlanilla";
+            string QueryEliminarPlanillas = "Delete tbl_PagoPlanillas where CodigoPagoPlanilla = @CodigoPagoPlanilla";
             SqlCommand CommandEliminarPlanillas = new SqlCommand(QueryEliminarPlanillas, cd_conexion.MtdAbrirConexion());
             CommandEliminarPlanillas.Parameters.AddWithValue("@CodigoPagoPlanilla", CodigoPagoPlanilla);
             CommandEliminarPlanillas.ExecuteNonQuery();

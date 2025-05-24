@@ -12,6 +12,48 @@ namespace CapaDatos
     {
         Conexión cd_conexion = new Conexión();
 
+        public List<dynamic> MtdListarReservas()
+        {
+            List<dynamic> ListaReservas = new List<dynamic>();
+            string QueryListaReservas = "Select CodigoReserva from tbl_Reservaciones";
+            SqlCommand cmd = new SqlCommand(QueryListaReservas, cd_conexion.MtdAbrirConexion());
+            SqlDataReader reader = cmd.ExecuteReader();
+
+            while (reader.Read())
+            {
+                ListaReservas.Add(new
+                {
+                    Value = reader["CodigoReserva"],
+                    Text = reader["CodigoReserva"]
+                });
+            }
+
+            cd_conexion.MtdCerrarConexion();
+            return ListaReservas;
+        }
+
+        public Decimal MtdMontoPago(int CodigoReserva)
+        {
+            decimal MontoPago = 0;
+
+            string QueryConsultarMontoPago = "Select Total from tbl_Reservaciones where CodigoReserva = @CodigoReserva";
+            SqlCommand CommandMontoPago = new SqlCommand(QueryConsultarMontoPago, cd_conexion.MtdAbrirConexion());
+            CommandMontoPago.Parameters.AddWithValue("@CodigoReserva", CodigoReserva);
+            SqlDataReader reader = CommandMontoPago.ExecuteReader();
+
+            if (reader.Read())
+            {
+                MontoPago = decimal.Parse(reader["Total"].ToString());
+            }
+            else
+            {
+                MontoPago = 0;
+            }
+
+            cd_conexion.MtdCerrarConexion();
+            return MontoPago;
+        }
+
         public DataTable MtdConsultarPagos()
         {
             string QueryConsultarPagos = "Select * from tbl_Pagos";

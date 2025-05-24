@@ -71,6 +71,7 @@
             this.btnSalir.Text = "Salir";
             this.btnSalir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // btnEliminar
             // 
@@ -85,6 +86,7 @@
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // dgvPagoPlanillas
             // 
@@ -97,6 +99,7 @@
             this.dgvPagoPlanillas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvPagoPlanillas.Size = new System.Drawing.Size(811, 203);
             this.dgvPagoPlanillas.TabIndex = 73;
+            this.dgvPagoPlanillas.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPagoPlanillas_CellClick);
             // 
             // label11
             // 
@@ -189,6 +192,7 @@
             this.txtHorasExtras.Name = "txtHorasExtras";
             this.txtHorasExtras.Size = new System.Drawing.Size(121, 20);
             this.txtHorasExtras.TabIndex = 72;
+            this.txtHorasExtras.TextChanged += new System.EventHandler(this.txtHorasExtras_TextChanged);
             // 
             // cboxEstado
             // 
@@ -239,6 +243,7 @@
             this.cboxCodigoEmpleado.Name = "cboxCodigoEmpleado";
             this.cboxCodigoEmpleado.Size = new System.Drawing.Size(121, 23);
             this.cboxCodigoEmpleado.TabIndex = 64;
+            this.cboxCodigoEmpleado.SelectedIndexChanged += new System.EventHandler(this.cboxCodigoEmpleado_SelectedIndexChanged);
             // 
             // btnCancelar
             // 
@@ -253,6 +258,7 @@
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnEditar
             // 
@@ -267,6 +273,7 @@
             this.btnEditar.Text = "Editar";
             this.btnEditar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // btnAgregar
             // 
@@ -281,6 +288,7 @@
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // label7
             // 
@@ -364,6 +372,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "frmPagoPlanillas";
             this.Text = "frmPagoPlanillas";
+            this.Load += new System.EventHandler(this.frmPagoPlanillas_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvPagoPlanillas)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

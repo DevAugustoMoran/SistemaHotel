@@ -26,7 +26,7 @@ namespace CapaPresentación
         private void frmServicios_Load(object sender, EventArgs e)
         {
             MtdConsultarServicios();
-            lblFecha.Text = cl_servicios.MtdFechaHoy().ToString();
+            lblFecha.Text = cl_servicios.MtdFechaHoy().ToString("dd/MM/yyyy");
         }
 
         public void MtdConsultarServicios()
