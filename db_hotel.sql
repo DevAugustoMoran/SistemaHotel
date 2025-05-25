@@ -236,3 +236,14 @@ Insert into tbl_Empleados(Nombre, Cargo, Salario, FechaContratacion, Estado, Usu
 Select CodigoHabitacion, Tipo from tbl_Habitaciones;
 
 Select * from tbl_Habitaciones;
+
+Select * from tbl_huespedes;
+Select * from tbl_Habitaciones;
+Select * from tbl_Reservaciones;
+Select * from tbl_Servicios; 
+Select * from tbl_Empleados;
+Select * from tbl_Pagos;
+Select * from tbl_Asignaciones;
+Select * from tbl_Consumos;
+Select * from tbl_PagoPlanillas;
+Select * from tbl_Usuarios;

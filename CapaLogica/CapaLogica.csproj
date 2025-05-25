@@ -56,7 +56,9 @@
     <Compile Include="CLhuespedes.cs" />
     <Compile Include="CLpagoPlanillas.cs" />
     <Compile Include="CLpagos.cs" />
+    <Compile Include="CLreservaciones.cs" />
     <Compile Include="CLservicios.cs" />
+    <Compile Include="CLusuarios.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
