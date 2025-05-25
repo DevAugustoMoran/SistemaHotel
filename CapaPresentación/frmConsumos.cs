@@ -9,7 +9,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using CapaLogica;
-using CapaDatos;
 using CapaPresentacion.Seguridad;
 
 namespace CapaPresentación
