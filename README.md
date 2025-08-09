@@ -10,7 +10,7 @@ Este proyecto es un **sistema de gestión para hoteles** desarrollado en **C#**,
 - **Reportes y estadísticas:** generación de reportes de ocupación, ingresos y consumos.
 - **Seguridad y control de acceso:** autenticación de usuarios y validación de operaciones.
 
-## 🛠Tecnologías utilizadas
+## Tecnologías utilizadas
 - **Lenguaje:** C#
 - **Framework:** .NET
 - **Base de datos:** SQL Server
